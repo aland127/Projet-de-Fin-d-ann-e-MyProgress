@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Connexion – MyProgress</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div style="font-weight: bold; font-size: 1.2rem;">MyProgress</div>
+    <div>
+      <a href="tableau_de_bord.php">Accueil</a>
+      <a href="ajouter_seance.html">Ajouter une séance</a>
+      <a href="historique.html">Historique</a>
+      <a href="objectifs.html">Objectifs</a>
+      <a href="connexion.html">Déconnexion</a>
+    </div>
+  </nav>
+
+  <div class="conteneur-form">
+    <div class="bloc-form">
+      <h2 style="text-align: center; color: #007bff; margin-bottom: 1.5rem;">Connexion</h2>
+
+      <form method="POST" action="connexion.php">
+        <label for="email">Adresse e-mail :</label>
+        <input type="email" id="email" name="email" required>
+        <div class="erreur" id="erreur-email">Veuillez entrer votre adresse e-mail.</div>
+
+        <label for="motdepasse">Mot de passe :</label>
+        <input type="password" id="motdepasse" name="motdepasse" required>
+        <div class="erreur" id="erreur-mdp">Veuillez entrer votre mot de passe.</div>
+
+        <button type="submit" id="bouton-connexion" disabled>Se connecter</button>
+      </form>
+
+      <p style="text-align: center; margin-top: 1rem;">
+        Pas encore de compte ? <a href="inscription.html">Créer un compte</a>
+      </p>
+
+      <p class="erreur" style="text-align:center;">
+        <?php
+          if (isset($_GET["erreur"])) {
+            echo "Identifiants incorrects.";
+          }
+        ?>
+      </p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

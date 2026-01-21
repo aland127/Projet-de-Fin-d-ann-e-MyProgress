@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Bienvenue sur MyProgress</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .accueil {
+      max-width: 1000px;
+      margin: 3rem auto;
+      text-align: center;
+    }
+
+    .accueil h1 {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .accueil p {
+      font-size: 1.2rem;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+    }
+
+    .banniere {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 2rem;
+    }
+
+    .boutons-accueil {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .boutons-accueil a {
+      padding: 1rem 2rem;
+      background-color: #1e90ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .boutons-accueil a:hover {
+      background-color: #156dc3;
+    }
+
+    .avantages {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .avantages .carte {
+      flex: 1 1 220px;
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      text-align: center;
+    }
+
+    .avantages img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div style="font-weight: bold; font-size: 1.2rem;">MyProgress</div>
+    <div>
+      <a href="index.html">Accueil</a>
+      <a href="connexion.html">Connexion</a>
+      <a href="inscription.html">Inscription</a>
+    </div>
+  </nav>
+
+  <div class="accueil">
+
+    <img src="musculation-scaled.jpg" alt="Musculation haltères" class="banniere">
+
+    <h1>Bienvenue sur MyProgress</h1>
+    <p>
+      Suivez vos séances, visualisez vos progrès et atteignez vos objectifs grâce à une plateforme pensée pour les sportifs.
+    </p>
+
+    <div class="boutons-accueil">
+      <a href="connexion.html">Se connecter</a>
+      <a href="inscription.html">S'inscrire</a>
+    </div>
+
+    <div class="avantages">
+      <div class="carte">
+        <img src="vue-en-angle-bas-d-un-homme-muscle-meconnaissable-se-preparant-a-soulever-une-barre-dans-un-club-de-sante.jpg" alt="Homme accroupi avec barre">
+        <h3>Suivi personnalisé</h3>
+        <p>Consignez vos séances et vos performances avec clarté.</p>
+      </div>
+      <div class="carte">
+        <img src="equipement-de-cyclisme-fitness-sante.jpg" alt="Cyclisme fitness">
+        <h3>Objectifs clairs</h3>
+        <p>Fixez-vous des objectifs précis et suivez-les dans le temps.</p>
+      </div>
+      <div class="carte">
+        <img src="pompes.jpg" alt="Pompes">
+        <h3>Interface simple</h3>
+        <p>Navigation fluide, données lisibles et design moderne.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

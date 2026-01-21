@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Historique – MyProgress</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <div style="font-weight: bold; font-size: 1.2rem;">MyProgress</div>
+    <div>
+      <a href="tableau_de_bord.php">Accueil</a>
+      <a href="ajouter_seance.html">Ajouter une séance</a>
+      <a href="historique.html">Historique</a>
+      <a href="objectifs.html">Objectifs</a>
+      <a href="connexion.html">Déconnexion</a>
+    </div>
+  </nav>
+
+  <div class="contenu">
+    <h2>Historique des séances</h2>
+
+<!-- Tri -->
+<div style="text-align: right; margin-bottom: 1rem;">
+  <label for="tri-date">Trier par date :</label>
+  <select id="tri-date">
+    <option value="desc">Du plus récent au plus ancien</option>
+    <option value="asc">Du plus ancien au plus récent</option>
+  </select>
+</div>
+
+<!-- Filtres -->
+<div style="display: flex; gap: 1rem; margin-bottom: 1rem;">
+  <div>
+    <label for="filtre-type">Type :</label>
+    <select id="filtre-type">
+      <option value="">Tous</option>
+      <option value="Musculation">Musculation</option>
+      <option value="Cardio">Cardio</option>
+      <option value="Vélo">Vélo</option>
+      <option value="Natation">Natation</option>
+    </select>
+  </div>
+  <div>
+    <label for="filtre-intensite">Intensité :</label>
+    <select id="filtre-intensite">
+      <option value="">Toutes</option>
+      <option value="Faible">Faible</option>
+      <option value="Moyenne">Moyenne</option>
+      <option value="Élevée">Élevée</option>
+    </select>
+  </div>
+</div>
+
+
+  <div id="liste-seances">
+    
+</div>
+<script src="script.js"></script>
+
+
+</body>
+</html>

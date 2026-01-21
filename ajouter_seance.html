@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ajouter une séance – MyProgress</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div style="font-weight: bold; font-size: 1.2rem;">MyProgress</div>
+    <div>
+      <a href="tableau_de_bord.php">Accueil</a>
+      <a href="ajouter_seance.html">Ajouter une séance</a>
+      <a href="historique.html">Historique</a>
+      <a href="objectifs.html">Objectifs</a>
+      <a href="connexion.html">Déconnexion</a>
+    </div>
+  </nav>
+  <div class="contenu">
+      <h3>Ajouter une séance</h3>
+
+      <form id="formulaire-seance" method="POST" action="ajouter_seance.php">
+
+
+        <label for="date">Date :</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="type">Type d’activité :</label>
+        <select id="type" name="type" required>
+          <option value="">-- Choisir une activité --</option>
+          <option value="musculation">Musculation</option>
+          <option value="cardio">Cardio</option>
+          <option value="vélo">Vélo</option>
+          <option value="natation">Natation</option>
+        </select>
+
+        <!-- Musculation -->
+        <div id="bloc-musculation" class="bloc-conditionnel masque">
+          <label for="zones">Partie(s) du corps travaillée(s) :</label>
+          <select id="zones" name="zones[]" multiple>
+            <option value="bras">Bras</option>
+            <option value="jambes">Jambes</option>
+            <option value="pectoraux">Pectoraux</option>
+            <option value="dos">Dos</option>
+            <option value="epaules">Épaules</option>
+            <option value="abdominaux">Abdominaux</option>
+          </select>
+
+
+  <div id="conteneur-exercices"></div>
+</div>
+
+
+        <!-- Cardio -->
+        <div id="bloc-cardio" class="bloc-conditionnel masque">
+          <label>Exercices cardio :</label>
+          <select name="exercices_cardio[]" multiple>
+            <option value="Course à pied">Course à pied</option>
+            <option value="Corde à sauter">Corde à sauter</option>
+            <option value="Rameur">Rameur</option>
+            <option value="Burpees">Burpees</option>
+            <option value="Montées de genoux">Montées de genoux</option>
+            <option value="Escaliers">Escaliers</option>
+            <option value="Fractionné">Fractionné</option>
+            <option value="Sauts en étoile">Sauts en étoile</option>
+            <option value="Jumping jacks">Jumping jacks</option>
+            <option value="Autre">Autre</option>
+
+          </select>
+          <input type="text" name="autre_exercice_cardio" placeholder="Autre exercice (facultatif)">
+        </div>
+
+        <!-- Vélo -->
+<div id="bloc-velo" class="bloc-conditionnel masque">
+  <label>Exercices vélo :</label>
+  <select name="exercices_velo[]" multiple>
+    <option value="Sprint">Sprint</option>
+    <option value="Côte">Côte</option>
+    <option value="Endurance">Endurance</option>
+    <option value="Fractionné">Fractionné</option>
+    <option value="Autre">Autre</option>
+  </select>
+  <input type="text" name="autre_exercice_velo" placeholder="Autre exercice (facultatif)">
+
+  <label for="distance_velo">Distance parcourue (km) :</label>
+  <input type="number" id="distance_velo" name="distance_velo" min="0" step="0.1">
+  
+  <label for="vitesse_velo">Vitesse moyenne (km/h) :</label>
+  <input type="number" id="vitesse_velo" name="vitesse_velo" min="0" step="0.1">
+</div>
+
+
+        <!-- Natation -->
+<div id="bloc-natation" class="bloc-conditionnel masque">
+  <label>Exercices natation :</label>
+  <select name="exercices_natation[]" multiple>
+    <option value="Brasse">Brasse</option>
+    <option value="Crawl">Crawl</option>
+    <option value="Papillon">Papillon</option>
+    <option value="Dos crawlé">Dos crawlé</option>
+    <option value="Battements avec planche">Battements avec planche</option>
+    <option value="Autre">Autre</option>
+  </select>
+  <input type="text" name="autre_exercice_natation" placeholder="Autre exercice (facultatif)">
+
+  <label for="distance_natation">Distance parcourue (mètres) :</label>
+  <input type="number" id="distance_natation" name="distance_natation" min="0" step="1">
+
+  <label for="vitesse_natation">Vitesse moyenne (km/h) :</label>
+  <input type="number" id="vitesse_natation" name="vitesse_natation" min="0" step="0.1">
+</div>
+
+
+        <!-- Commun -->
+        <label for="duree">Durée (en minutes) :</label>
+        <input type="number" id="duree" name="duree" min="1" required>
+
+        <label for="intensite">Intensité :</label>
+        <select id="intensite" name="intensite">
+          <option value="">-- Choisir une intensité --</option>
+          <option value="faible">Faible</option>
+          <option value="moyenne">Moyenne</option>
+          <option value="élevée">Élevée</option>
+        </select>
+
+        <label for="fatigue">Fatigue ressentie :</label>
+        <select id="fatigue" name="fatigue">
+          <option value="">-- Sélectionner --</option>
+          <option value="aucune">Aucune</option>
+          <option value="légère">Légère</option>
+          <option value="modérée">Modérée</option>
+          <option value="importante">Importante</option>
+          <option value="extrême">Extrême</option>
+        </select>
+
+        <label for="commentaire">Commentaire (facultatif) :</label>
+        <input type="text" id="commentaire" name="commentaire">
+
+        <button type="submit">Enregistrer la séance</button>
+      </form>
+    </div>
+  </div>
+
+<script src="script.js?v=666"></script>
+
+
+</body>
+</html>

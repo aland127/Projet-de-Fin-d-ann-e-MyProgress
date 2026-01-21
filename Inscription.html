@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Inscription – MyProgress</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div style="font-weight: bold; font-size: 1.2rem;">MyProgress</div>
+    <div>
+      <a href="tableau_de_bord.php">Accueil</a>
+      <a href="ajouter_seance.html">Ajouter une séance</a>
+      <a href="historique.html">Historique</a>
+      <a href="objectifs.html">Objectifs</a>
+      <a href="connexion.html">Déconnexion</a>
+    </div>
+  </nav>
+
+  <div class="contenu">
+    <h2 style="text-align: center; margin-bottom: 2rem;">Inscription</h2>
+
+      <form method="POST" action="traitement_inscription.php">
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" required>
+        <p class="erreur" id="erreur-prenom">Champ requis</p>
+
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required>
+        <p class="erreur" id="erreur-nom">Champ requis</p>
+
+        <label for="age">Âge :</label>
+        <input type="number" id="age" name="age" required>
+        <p class="erreur" id="erreur-age">Champ requis</p>
+
+        <label for="poids">Poids :</label>
+        <input type="number" id="poids" name="poids" required>
+        <p class="erreur" id="erreur-poids">Champ requis</p>
+
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" required>
+        <p class="erreur" id="erreur-email">Champ requis</p>
+
+        <label for="motdepasse">Mot de passe :</label>
+        <input type="password" id="motdepasse" name="motdepasse" required>
+        <p class="erreur" id="erreur-mdp">Champ requis</p>
+
+        <label for="confirmation">Confirmation du mot de passe :</label>
+        <input type="password" id="confirmation" name="confirmation" required>
+        <p class="erreur" id="erreur-confirmation">Les mots de passe ne correspondent pas</p>
+
+        <button type="submit" id="bouton-inscription" disabled>S'inscrire</button>
+      </form>
+
+      <p style="text-align: center; margin-top: 1rem;">
+        Déjà un compte ? <a href="Connexion.html">Se connecter</a>
+      </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

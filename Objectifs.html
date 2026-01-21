@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Objectifs – MyProgress</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <nav>
+    <div style="font-weight: bold; font-size: 1.2rem;">MyProgress</div>
+    <div>
+      <a href="tableau_de_bord.php">Accueil</a>
+      <a href="ajouter_seance.html">Ajouter une séance</a>
+      <a href="historique.html">Historique</a>
+      <a href="objectifs.html">Objectifs</a>
+      <a href="connexion.html">Déconnexion</a>
+    </div>
+  </nav>
+
+  <div class="contenu">
+    <h2>Mes Objectifs</h2>
+
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+  <div></div> 
+  <button id="btn-ajouter-objectif" class="ajouter-objectif">+ Ajouter un objectif</button>
+</div>
+
+    <div id="form-ajout" class="carte-ajout masque">
+      <form id="formulaire-objectif">
+        <label for="type_obj">Type :</label>
+        <select id="type_obj" name="type" required>
+  <option value="musculation">Poids soulevé (muscu)</option>
+  <option value="cardio">Temps cardio (min)</option>
+  <option value="velo">Distance vélo (km)</option>
+  <option value="natation">Distance natation (m)</option>
+  <option value="nombre-seances">Nombre de séances</option>
+</select>
+
+
+        <div id="bloc-exercice">
+          <label for="exercice_obj">Exercice :</label>
+          <select id="exercice_obj" name="exercice">
+            <option value="">— Aucun —</option>
+          </select>
+        </div>
+
+        <div id="frequence-container" style="display: none;">
+          <label for="frequence">Fréquence :</label>
+          <select id="frequence" name="frequence">
+            <option value="hebdo">Hebdomadaire</option>
+            <option value="mensuel">Mensuel</option>
+            <option value="annuel">Annuel</option>
+          </select>
+        </div>
+
+        <label for="valeur">Valeur objectif :</label>
+        <input type="number" id="valeur" name="valeur" min="1" required />
+
+        <button type="submit">Ajouter</button>
+      </form>
+    </div>
+
+    <div id="liste-objectifs">
+      <p id="chargement">Chargement...</p>
+    </div>
+  </div>
+</body>
+</html>
